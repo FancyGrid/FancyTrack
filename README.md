@@ -10,13 +10,6 @@ It is free and light.
 But at the moment it overrides window.onerror handler.  
 window.onerror is not supported by IE Edge
 
-## Install
-
-#### *bower*
-```
-bower install fancytrack
-```
-
 ## Quick Start
 Include a reference to the FancyTrack library
 
