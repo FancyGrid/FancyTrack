@@ -3,7 +3,7 @@
 Build v1.0.0
 
 Free Tiny FancyTrack JavaScript error tracking library from FancyGrid team.  
-FancyTrack is light alternative to https://trackjs.org service.  
+FancyTrack is light alternative to [TrackJS](https://trackjs.com/) service.  
 
 ##Pros and Cons
 It is free and light.  
@@ -61,8 +61,7 @@ The package includes the following:
 ```
 
 ## Resources
-Capture and report JavaScript errors with window.onerror
-https://blog.sentry.io/2016/01/04/client-javascript-reporting-window-onerror.html
+[Capture and report JavaScript errors with window.onerror](https://blog.sentry.io/2016/01/04/client-javascript-reporting-window-onerror.html)
 
 ## Support
 If you need any assistance or would like to report any bugs found in FancyTrack, please contact us at support@fancygrid.com
