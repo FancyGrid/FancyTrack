@@ -1,6 +1,6 @@
 # FancyTrack
 
-Build v1.0.0
+Build v1.0.1
 
 Free Tiny FancyTrack JavaScript error tracking library from FancyGrid team.  
 FancyTrack is light alternative to [TrackJS](https://trackjs.com/) service.  
@@ -17,6 +17,8 @@ Include a reference to the FancyTrack library
 <script src="/fancytrack/fancytrack.min.js"></script>
 ```
 The `FancyTrack` object is now accessible. Happy error tracking!
+
+### Sample: Base Init
 ```html
 <script>
 FancyTrack.init({
@@ -25,7 +27,7 @@ FancyTrack.init({
 </script>
 ```
 
-## Method
+### Sample: Set method of request
 ```html
 <script>
 FancyTrack.init({
@@ -35,14 +37,28 @@ FancyTrack.init({
 </script>
 ```
 
+### Sample: Track/Send custom error
+```html
+<script>
+FancyTrack.init({
+  url: '/trackerror/'
+});
+
+FancyTrack.track("My Error");
+</script>
+```
+
 ## Parametres that FancyTrack sends
 
-* url
+* browser
+* columnNumber
 * errorText
 * errorName
 * errorStack
 * lineNumber
-* columnNumber
+* mobile
+* os
+* url
 
 ## Package Directory
 The package includes the following:
