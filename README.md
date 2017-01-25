@@ -59,6 +59,7 @@ FancyTrack.track("My Error");
 * mobile
 * os
 * url
+* userAgent
 
 ## Package Directory
 The package includes the following:
