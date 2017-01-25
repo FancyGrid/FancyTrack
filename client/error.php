@@ -1,11 +1,7 @@
 <?php
-/*
- * This is very simple test case of processing error report.
- */
-
-$to      = 'trackerror@domain.com';
-$from 	 = 'support@domain.com';
-$subject = 'Error on domain.com';
+$to      = 'trackerror@fancygrid.com';
+$from 	 = 'support@fancygrid.com';
+$subject = 'Error on fancygrid.com';
 
 $url = $_POST['url'];
 $errorText = $_POST['errorText'];
@@ -20,7 +16,8 @@ $browser = $_POST['browser'];
 $mobile = $_POST['mobile'];
 $errorStack2 = preg_replace("!\r?\n!", "", $_POST['errorStack']);
 
-$message = "url - ".$url." \r\n errorText - ".$errorText."\r\n lineNumber - ".$lineNumber."\r\n columnNumber - ".$columnNumber."\r\n userAgent - ".$userAgent;
+$message = "url - ".$url." \r\n errorText - ".$errorText."\r\n lineNumber - ".$lineNumber."\r\n columnNumber - ".$columnNumber."\r\n userAgent - ".$userAgent .",\r\n";
+$message .= "os - ".$os." \r\n browser - ".$browser."\r\n mobile - ".$mobile.",\r\n";
 $message .= "\r\n Error Name: " . $errorName . " \r\n Error Message - " . $errorMessage . " \r\n Error errorStack - " . $errorStack2;
 $headers = 'From: ' . $from . "\r\n" .
     'Reply-To: '.$from."\r\n" .
