@@ -1,7 +1,11 @@
 <?php
-$to      = 'trackerror@fancygrid.com';
-$from 	 = 'support@fancygrid.com';
-$subject = 'Error on fancygrid.com';
+/*
+ * This is very simple test case of processing error report.
+ */
+
+$to      = 'trackerror@domain.com';
+$from 	 = 'support@domain.com';
+$subject = 'Error on domain.com';
 
 $url = $_POST['url'];
 $errorText = $_POST['errorText'];
