@@ -2,7 +2,7 @@
 
 Build v1.0.1
 
-Free Tiny FancyTrack JavaScript error tracking library from FancyGrid team.  
+FancyTrack - JavaScript error tracking library from FancyGrid team.  
 FancyTrack is light alternative to [TrackJS](https://trackjs.com/) service.  
 
 ##Pros and Cons
