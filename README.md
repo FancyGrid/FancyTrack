@@ -67,6 +67,7 @@ The package includes the following:
 |   README.md
 ├── client
 │   ├── fancytrack.min.js
+│   ├── fancytrack.js
 |   ...
 ```
 
