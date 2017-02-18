@@ -71,7 +71,7 @@ The package includes the following:
 ```
 
 ## Resources
-[Capture and report JavaScript errors with window.onerror](https://blog.sentry.io/2016/01/04/client-javascript-reporting-window-onerror.html)
+[Capture and report JavaScript errors with window.onerror](https://blog.sentry.io/2016/01/04/client-javascript-reporting-window-onerror.html)  
 [Test case of error reportin on php](https://github.com/FancyGrid/FancyTrack/blob/master/client/error.php)
 
 ## Support
