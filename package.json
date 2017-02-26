@@ -1,0 +1,19 @@
+{
+  "name": "fancytrack",
+  "version": "1.0.1",
+  "description": "JavaScript Error Tracking library from FancyGrid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FancyGrid/FancyTrack.git"
+  },
+  "keywords": [
+    "fancytrack",
+    "track",
+    "error",
+    "javascript",
+    "trackjs",
+    "html5"
+  ],
+  "author": "FancyGrid",
+  "license": "MIT"
+}
