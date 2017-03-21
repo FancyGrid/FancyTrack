@@ -5,7 +5,7 @@ Build v1.0.2
 FancyTrack - JavaScript error tracking library from FancyGrid team.  
 FancyTrack is light alternative to [TrackJS](https://trackjs.com/) service.  
 
-##Pros and Cons
+## Pros and Cons
 It is free and light.  
 But at the moment it overrides window.onerror handler.  
 window.onerror is not supported by IE Edge
