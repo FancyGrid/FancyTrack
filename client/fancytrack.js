@@ -1,6 +1,6 @@
 /*!
  * FancyTrack - JavaScript Error Tracking library
- * version - 1.0.1
+ * version - 1.0.2
  * https://github.com/FancyGrid/FancyTrack
  * 
  * Example: Base Init
@@ -35,13 +35,22 @@
  *  - browser
  */
 
-(function(){
+(function(global, factory) {
+  if(typeof define === 'function' && define.amd){
+    define(function() {
+		return factory(global);
+	})
+  }
+  else{
+    factory(global);
+  }
+}(this, function(window){
 
 /**
  * @class FancyTrack - global class with error tracking functions
  * @singleton
  */
-FancyTrack = function(){};
+var FancyTrack = function(){};
 
 FancyTrack.prototype = {
   /*
@@ -535,6 +544,9 @@ FancyTrack.prototype = {
   }
 };
 
-FancyTrack = new FancyTrack();
+  FancyTrack = new FancyTrack();
+  
+  window.FancyTrack = FancyTrack;
 
-})();
+  return FancyTrack;
+}));

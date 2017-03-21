@@ -1,7 +1,10 @@
 {
   "name": "fancytrack",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "JavaScript Error Tracking library from FancyGrid",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },  
   "repository": {
     "type": "git",
     "url": "https://github.com/FancyGrid/FancyTrack.git"
