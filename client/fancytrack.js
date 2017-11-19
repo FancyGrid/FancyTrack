@@ -1,6 +1,6 @@
 /*!
  * FancyTrack - JavaScript Error Tracking library
- * version - 1.0.2
+ * version - 1.0.5
  * https://github.com/FancyGrid/FancyTrack
  * 
  * Example: Base Init
@@ -156,7 +156,13 @@ FancyTrack.prototype = {
       eObject = eObject || {};
 
       if(window.console && console.log && me.consoleText){
-        console.log.apply(window, [].concat(me.consoleText).concat(me.consoleArgs));
+		if(me.isIE){
+			me.consoleText = me.consoleText.replace(/\%c/g, '');
+			console.log(me.consoleText);  
+		}
+		else{
+          console.log.apply(window, [].concat(me.consoleText).concat(me.consoleArgs));
+		}
       }
       
       var report = {},
@@ -369,7 +375,7 @@ FancyTrack.prototype = {
   },
   /*
    * @private
-   * Getting user browser infor
+   * Getting user browser info
    */
   getUserInfo: function(){
     var me = this,
@@ -519,6 +525,8 @@ FancyTrack.prototype = {
         osVersion = osVersion[1] + '.' + osVersion[2] + '.' + (osVersion[3] | 0);
         break;
     }
+	
+	me.isIE = /Microsoft/.test(browser) || /Internet/.test(browser) || /Explorer/.test(browser);
 
     me.userAgent = navigator.userAgent;
     me.os = os +' '+ osVersion;

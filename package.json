@@ -1,6 +1,6 @@
 {
   "name": "fancytrack",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "JavaScript Error Tracking library from FancyGrid",
   "main" : "index.js",
   "scripts": {
