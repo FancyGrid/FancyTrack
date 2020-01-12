@@ -183,21 +183,7 @@ FancyTrack.prototype = {
           report[p] = me.params[p];
         }
       }
-      
-      if(window.$ && $.ajax){
-        $.ajax({
-          type: me.method,
-          url: me.url,
-          data: report
-        });
-      }
-      else{
-        me.ajax({
-          method: me.method,
-          url: me.url,
-          params: report
-        });
-      }
+      me.sendError(me, report);
     };
   },
   /*
@@ -358,17 +344,34 @@ FancyTrack.prototype = {
       
     data.errorText = msg;
     
+    me.sendError(me, data);
+  },
+  /*
+   * method to send customer exception, with an exception object
+   */
+  trackException: function(eObject){
+  	var me = this,
+        data = me.getBaseReport();
+    
+    data.errorText = eObject;
+    data.errorName = eObject.name;
+    data.errorMessage = eObject.message;
+    data.errorStack = eObject.stack;
+    
+    me.sendError(me, data);
+  },
+  sendError: function(options, data) {
     if(window.$ && $.ajax){
       $.ajax({
-        type: me.method,
-        url: me.url,
+        type: options.method,
+        url: options.url,
         data: data
       });
     }
     else{
       me.ajax({
-        method: me.method,
-        url: me.url,
+        method: options.method,
+        url: options.url,
         params: data
       });
     }
